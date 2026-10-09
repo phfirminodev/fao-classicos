@@ -1,0 +1,115 @@
+"use client";
+
+import React, { useState } from 'react';
+import Header from '@/components/Header';
+import HeroSlider from '@/components/HeroSlider';
+import FeaturedSection from '@/components/FeaturedSection';
+import ShowroomSection from '@/components/ShowroomSection';
+import InventoryView from '@/components/InventoryView';
+import VehicleDetailModal from '@/components/VehicleDetailModal';
+import AboutView from '@/components/AboutView';
+import ContactView from '@/components/ContactView';
+import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import VideoIntro from '@/components/VideoIntro';
+import { CARS_DATA, Car } from '@/data/cars';
+
+export default function Home() {
+  const [activeTab, setActiveTab] = useState('home');
+  const [selectedBrand, setSelectedBrand] = useState('Todas');
+  const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+  const [showIntro, setShowIntro] = useState(true);
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleBrandSelect = (brand: string) => {
+    setSelectedBrand(brand);
+    setActiveTab('veiculos');
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleSelectCar = (car: Car) => {
+    setSelectedCar(car);
+  };
+
+  return (
+    <div className="min-h-screen bg-white text-neutral-900 font-sans flex flex-col justify-between selection:bg-[#a11a1a] selection:text-white">
+      {/* Cinematic Logo Reveal Video Intro */}
+      {showIntro && (
+        <VideoIntro onComplete={() => setShowIntro(false)} />
+      )}
+
+      {/* Main Header with Search pill, Phone, and red active line indicator */}
+      <Header
+        activeTab={activeTab}
+        setActiveTab={handleTabChange}
+        onSelectBrand={handleBrandSelect}
+        selectedBrand={selectedBrand}
+      />
+
+      {/* Main Content based on active tab */}
+      <main className="flex-1">
+        {activeTab === 'home' && (
+          <>
+            {/* Hero Car Showcase Slider */}
+            <HeroSlider
+              cars={CARS_DATA}
+              onSelectCar={handleSelectCar}
+            />
+
+            {/* Curated Highlights Showcase ("Apaixone-se pelo clássico") */}
+            <FeaturedSection
+              cars={CARS_DATA}
+              onSelectCar={handleSelectCar}
+              onOpenInventory={() => handleTabChange('veiculos')}
+            />
+
+            {/* Showroom & 4 Pillars ("Excelência em cada detalhe") */}
+            <ShowroomSection
+              onOpenInventory={() => handleTabChange('veiculos')}
+            />
+          </>
+        )}
+
+        {activeTab === 'veiculos' && (
+          <InventoryView
+            cars={CARS_DATA}
+            onSelectCar={handleSelectCar}
+            initialBrand={selectedBrand}
+          />
+        )}
+
+        {activeTab === 'sobre' && (
+          <AboutView
+            onOpenInventory={() => handleTabChange('veiculos')}
+          />
+        )}
+
+        {activeTab === 'contato' && (
+          <ContactView />
+        )}
+      </main>
+
+      {/* Vehicle Detail Lightbox / Modal */}
+      {selectedCar && (
+        <VehicleDetailModal
+          car={selectedCar}
+          onClose={() => setSelectedCar(null)}
+        />
+      )}
+
+      {/* Floating WhatsApp Action Button */}
+      <FloatingWhatsApp />
+
+      {/* High-end Automotive Footer */}
+      <Footer onNavigate={handleTabChange} />
+    </div>
+  );
+}

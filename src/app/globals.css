@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom scrollbar matching GPS Motors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #a11a1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7a1212;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.whatsapp-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background-color: #25D366;
+  opacity: 0.6;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  z-index: -1;
+}
+
+.watermark-text {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Automotive Image Post-processing & Fidelity Enhancement */
+.car-image-treatment {
+  filter: contrast(1.05) saturate(1.06) brightness(1.01);
+  image-rendering: -webkit-optimize-contrast;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.car-image-treatment:hover {
+  filter: contrast(1.08) saturate(1.1) brightness(1.03);
+}
+
+.logo-treatment {
+  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.1) brightness(1.02);
+}
