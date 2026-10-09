@@ -17,30 +17,32 @@
 
 ## ✨ Principais Funcionalidades
 
-1. **Preloader Animado de Abertura:**
-   - Revelação elegante do monograma **FAO CLÁSSICOS** com barra de progresso em vermelho bordô (`#a11a1a`) e abertura estilo cortina.
-2. **Header de Alto Padrão:**
+1. **Intro Cinematográfica em Vídeo & Revelação da Marca:**
+   - Vídeo remasterizado em alta definição e contraste balanceado com revelação da logo `F Λ O CLÁSSICOS` e abertura suave para o showroom.
+2. **Preloader & Identidade Visual Oficial:**
+   - Monograma oficial da **FAO CLÁSSICOS** com barra de progresso em vermelho bordô (`#a11a1a`) e tipografia refinada.
+3. **Header de Alto Padrão:**
    - Pílula central com rotação dinâmica de marcas (*Chevrolet, Ford, Dodge, Porsche, Ferrari, Volkswagen, Puma*).
    - Dropdown instantâneo para seleção e filtro por fabricante.
    - Navegação com indicador vertical deslizante na cor da marca.
    - Menu drawer responsivo para dispositivos móveis.
-3. **Hero Car Showcase Slider:**
+4. **Hero Car Showcase Slider:**
    - Tipografia gigante watermark de fundo com o nome do modelo (*MAVERICK, OPALA SS, CHARGER, 911 CARRERA, 328 GTS*).
    - Dados técnicos rápidos (ano, km, motor, câmbio, selo de Placa Preta).
    - Controles de paginação interativos e botão de rolagem suave.
-4. **Catálogo de Estoque com Filtros Avançados:**
+5. **Catálogo de Estoque com Filtros Avançados:**
    - Filtros dinâmicos por **Marca**, **Década** (Anos 60, 70, 80), **Tipo de Câmbio** (Manual / Automático) e **Placa Preta**.
    - Campo de busca instantânea por palavras-chave e ordenação múltipla (Preço, KM, Ano e A-Z).
-5. **Ficha Técnica & Galeria Completa:**
+6. **Ficha Técnica & Galeria Completa:**
    - Galeria com carrossel de fotos em alta resolução e barra de miniaturas.
    - Matriz de especificações técnicas completas e laudo de autenticidade.
    - Botão direto de negociação via **WhatsApp** com mensagem pré-formatada do veículo e valor.
-6. **Módulo de Consignação & Venda:**
+7. **Módulo de Consignação & Venda:**
    - Formulário exclusivo para colecionadores enviarem veículos para avaliação técnica da FAO.
-7. **Showroom & Contato:**
+8. **Showroom & Contato:**
    - Apresentação dos pilares de curadoria técnica e laudo FBVA.
    - Cards dedicados dos consultores especialistas com links diretos de atendimento.
-8. **Botão Flutuante de WhatsApp com Pulso:**
+9. **Botão Flutuante de WhatsApp com Pulso:**
    - Acesso imediato à equipe de especialistas em qualquer página.
 
 ---
@@ -49,7 +51,7 @@
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/fao-classicos.git
+   git clone https://github.com/user63829743/fao-classicos.git
    cd fao-classicos
    ```
 
