@@ -51,7 +51,7 @@
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/user63829743/fao-classicos.git
+   git clone https://github.com/phfirminodev/fao-classicos.git
    cd fao-classicos
    ```
 
