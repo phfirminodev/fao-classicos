@@ -10,7 +10,6 @@ interface VideoIntroProps {
 export default function VideoIntro({ onComplete }: VideoIntroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [fadeOut, setFadeOut] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   const handleFinish = () => {
     if (fadeOut) return;
@@ -42,13 +41,6 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
       });
     }
 
-    const handleTimeUpdate = () => {
-      if (video.duration) {
-        setProgress((video.currentTime / video.duration) * 100);
-      }
-    };
-
-    video.addEventListener('timeupdate', handleTimeUpdate);
     video.addEventListener('ended', handleFinish);
 
     // Fallback timer: 6.2s (the remastered video is 5.8s)
@@ -57,7 +49,6 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
     }, 6200);
 
     return () => {
-      video.removeEventListener('timeupdate', handleTimeUpdate);
       video.removeEventListener('ended', handleFinish);
       clearTimeout(fallbackTimer);
     };
@@ -99,14 +90,6 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
           <span>Pular intro</span>
           <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform text-[#a11a1a]" />
         </button>
-      </div>
-
-      {/* Bottom video progress indicator in signature red */}
-      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-neutral-900 overflow-hidden">
-        <div
-          className="h-full bg-[#a11a1a] transition-all duration-150 ease-linear shadow-[0_0_10px_#a11a1a]"
-          style={{ width: `${progress}%` }}
-        />
       </div>
     </div>
   );
