@@ -67,14 +67,22 @@
   pointer-events: none;
 }
 
-/* Automotive Image Post-processing & Fidelity Enhancement */
+/* Automotive Image Post-processing & Ultra-Fluid Cinematic Hover */
 .car-image-treatment {
   filter: contrast(1.05) saturate(1.06) brightness(1.01);
   image-rendering: -webkit-optimize-contrast;
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+  transform: translate3d(0, 0, 0) scale(1);
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.group:hover .car-image-treatment,
 .car-image-treatment:hover {
+  transform: translate3d(0, 0, 0) scale(1.065);
+  -webkit-transform: translate3d(0, 0, 0) scale(1.065);
   filter: contrast(1.08) saturate(1.1) brightness(1.03);
 }
 

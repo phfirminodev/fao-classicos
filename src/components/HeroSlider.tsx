@@ -151,7 +151,7 @@ export default function HeroSlider({ cars, onSelectCar }: HeroSliderProps) {
                 <img
                   src={currentCar.heroImage}
                   alt={`${currentCar.brand} ${currentCar.model}`}
-                  className="w-full h-[280px] sm:h-[380px] md:h-[440px] object-cover object-center car-image-treatment group-hover:scale-105 duration-1000"
+                  className="w-full h-[280px] sm:h-[380px] md:h-[440px] object-cover object-center car-image-treatment"
                 />
                 
                 {/* Soft gradient bottom overlay */}

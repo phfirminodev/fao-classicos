@@ -273,7 +273,7 @@ export default function InventoryView({
                     <img
                       src={car.heroImage}
                       alt={`${car.brand} ${car.model}`}
-                      className="w-full h-full object-cover car-image-treatment group-hover:scale-105 duration-700"
+                      className="w-full h-full object-cover car-image-treatment"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />

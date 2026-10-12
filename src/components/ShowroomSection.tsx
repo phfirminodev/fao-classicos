@@ -75,11 +75,11 @@ export default function ShowroomSection({ onOpenInventory }: ShowroomSectionProp
               <p className="text-xs text-neutral-500 mb-4 leading-relaxed">
                 Um espaço climatizado e acolhedor projetado especialmente para a preservação impecável e apreciação de cada clássico.
               </p>
-              <div className="relative h-44 rounded-xl overflow-hidden shadow-inner">
+              <div className="relative h-44 rounded-xl overflow-hidden shadow-inner group">
                 <img
                   src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80"
                   alt="Showroom FAO Clássicos"
-                  className="w-full h-full object-cover car-image-treatment hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover car-image-treatment"
                 />
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function ShowroomSection({ onOpenInventory }: ShowroomSectionProp
               <img
                 src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
                 alt="FAO Clássicos Detalhes"
-                className="w-full h-[320px] md:h-[400px] object-cover car-image-treatment group-hover:scale-105 transition-transform duration-1000"
+                className="w-full h-[320px] md:h-[400px] object-cover car-image-treatment"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-8">
                 <div>

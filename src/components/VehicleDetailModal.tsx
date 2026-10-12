@@ -64,11 +64,11 @@ export default function VehicleDetailModal({ car, onClose }: VehicleDetailModalP
           
           {/* Main Photo Gallery */}
           <div className="space-y-4">
-            <div className="relative rounded-2xl overflow-hidden bg-neutral-900 aspect-video md:aspect-[16/9] max-h-[500px]">
+            <div className="relative rounded-2xl overflow-hidden bg-neutral-900 aspect-video md:aspect-[16/9] max-h-[500px] group">
               <img
                 src={images[activeImageIndex]}
                 alt={`${car.brand} ${car.model}`}
-                className="w-full h-full object-cover car-image-treatment transition-all duration-500"
+                className="w-full h-full object-cover car-image-treatment"
               />
 
               {/* Prev / Next photo buttons */}

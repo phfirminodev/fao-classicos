@@ -50,7 +50,7 @@ export default function AboutView({ onOpenInventory }: AboutViewProps) {
         </div>
 
         {/* Hero image of showroom */}
-        <div className="relative rounded-3xl overflow-hidden mb-20 shadow-2xl h-[320px] md:h-[500px]">
+        <div className="relative rounded-3xl overflow-hidden mb-20 shadow-2xl h-[320px] md:h-[500px] group">
           <img
             src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=85"
             alt="Showroom FAO Clássicos"
