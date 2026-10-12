@@ -79,26 +79,13 @@ export default function Footer({ onNavigate }: FooterProps) {
           
           {/* Brand & Overview (Col 1) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center space-x-3.5">
-              <div className="relative h-13 w-13 bg-black rounded-xl overflow-hidden shrink-0">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/fao-logo.jpg"
-                  alt="FAO Clássicos Logo"
-                  className="w-full h-full object-cover logo-treatment"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-[0.2em] text-white uppercase leading-none font-sans flex items-center">
-                  <span>F</span>
-                  <span className="mx-0.5 text-[0.9em]">Λ</span>
-                  <span>O</span>
-                  <span className="text-[#a11a1a] ml-1.5 font-semibold">CLÁSSICOS</span>
-                </span>
-                <span className="text-[10px] tracking-[0.3em] text-neutral-400 uppercase mt-1">
-                  Veículos de Coleção
-                </span>
-              </div>
+            <div className="select-none py-1">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/Logo-Sem-fundo.png"
+                alt="FAO Clássicos"
+                className="h-16 w-auto object-contain brightness-100"
+              />
             </div>
             <p className="text-xs text-neutral-400 leading-relaxed max-w-sm">
               Especialistas em intermediação, curadoria técnica e comercialização de veículos clássicos, esportivos de época e automóveis de coleção com rigor e transparência.

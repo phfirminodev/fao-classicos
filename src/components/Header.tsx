@@ -63,37 +63,22 @@ export default function Header({
       >
         <div className="max-w-[1340px] mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between">
-            {/* Logo Oficial FAO Clássicos */}
+            {/* Logo Oficial FAO Clássicos (Logo-Sem-fundo) */}
             <div 
-              className="cursor-pointer flex items-center space-x-3.5 select-none group"
+              className="cursor-pointer select-none group flex items-center"
               onClick={() => {
                 setActiveTab('home');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              <div className="relative h-13 w-13 md:h-15 md:w-15 bg-black rounded-xl overflow-hidden shrink-0 flex items-center justify-center group-hover:scale-102 transition-transform">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/fao-logo.jpg"
-                  alt="FAO Clássicos Logo"
-                  className="w-full h-full object-cover logo-treatment"
-                />
-              </div>
-              <div className="flex flex-col">
-                <div className={`text-xl md:text-2xl font-bold tracking-[0.2em] uppercase leading-none font-sans flex items-center transition-colors duration-300 ${
-                  scrolled ? 'text-white' : 'text-neutral-950'
-                }`}>
-                  <span>F</span>
-                  <span className="mx-0.5 text-[0.9em]">Λ</span>
-                  <span>O</span>
-                  <span className="text-[#a11a1a] ml-1.5 font-semibold">CLÁSSICOS</span>
-                </div>
-                <span className={`text-[10px] md:text-[11px] tracking-[0.3em] uppercase mt-1 font-medium transition-colors duration-300 ${
-                  scrolled ? 'text-neutral-400' : 'text-neutral-400'
-                }`}>
-                  Veículos de Coleção
-                </span>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/Logo-Sem-fundo.png"
+                alt="FAO Clássicos"
+                className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
+                  scrolled ? 'h-11 md:h-13 brightness-100' : 'h-13 md:h-16 brightness-0'
+                }`}
+              />
             </div>
 
             {/* Central Search / Brand Selector Button (GPS Motors Style) */}
@@ -266,26 +251,20 @@ export default function Header({
         }`}
       >
         <div className="flex items-center justify-between border-b border-neutral-100 pb-6">
-          <div className="flex items-center space-x-3.5">
-            <div className="relative h-12 w-12 bg-black rounded-xl overflow-hidden shrink-0">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/fao-logo.jpg"
-                alt="FAO Clássicos Logo"
-                className="w-full h-full object-cover logo-treatment"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-lg font-bold tracking-[0.2em] text-neutral-900 uppercase leading-none font-sans flex items-center">
-                <span>F</span>
-                <span className="mx-0.5 text-[0.9em]">Λ</span>
-                <span>O</span>
-                <span className="text-[#a11a1a] ml-1.5 font-semibold">CLÁSSICOS</span>
-              </span>
-              <span className="text-[8px] tracking-[0.22em] text-neutral-400 uppercase mt-1">
-                Veículos de Coleção
-              </span>
-            </div>
+          <div 
+            className="cursor-pointer select-none"
+            onClick={() => {
+              setActiveTab('home');
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Logo-Sem-fundo.png"
+              alt="FAO Clássicos"
+              className="h-12 w-auto object-contain brightness-0"
+            />
           </div>
           <button
             onClick={() => setMobileMenuOpen(false)}
