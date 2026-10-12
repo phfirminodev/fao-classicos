@@ -79,23 +79,23 @@ export default function Footer({ onNavigate }: FooterProps) {
           
           {/* Brand & Overview (Col 1) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="relative h-11 w-11 bg-black rounded-lg overflow-hidden border border-neutral-800 shrink-0">
+            <div className="flex items-center space-x-3.5">
+              <div className="relative h-13 w-13 bg-black rounded-xl overflow-hidden shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/fao-logo.jpg"
                   alt="FAO Clássicos Logo"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover logo-treatment"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-[0.2em] text-white uppercase leading-none font-sans flex items-center">
+                <span className="text-xl font-bold tracking-[0.2em] text-white uppercase leading-none font-sans flex items-center">
                   <span>F</span>
                   <span className="mx-0.5 text-[0.9em]">Λ</span>
                   <span>O</span>
                   <span className="text-[#a11a1a] ml-1.5 font-semibold">CLÁSSICOS</span>
                 </span>
-                <span className="text-[9px] tracking-[0.28em] text-neutral-400 uppercase mt-1">
+                <span className="text-[10px] tracking-[0.3em] text-neutral-400 uppercase mt-1">
                   Veículos de Coleção
                 </span>
               </div>

@@ -31,7 +31,7 @@ export default function FaoLogo({
     return (
       <div className={`flex items-center space-x-3 select-none ${className}`}>
         <div 
-          className="relative overflow-hidden rounded-md bg-black border border-neutral-800 shadow-sm shrink-0 flex items-center justify-center"
+          className="relative overflow-hidden rounded-xl bg-black shrink-0 flex items-center justify-center"
           style={{ width: currentSize.width, height: currentSize.height }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
