@@ -64,8 +64,8 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
       {/* Ambient background bloom & cinematic vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(161,26,26,0.12)_0%,rgba(0,0,0,0.85)_70%,#000000_100%)] pointer-events-none -z-10" />
 
-      {/* High-Quality 1080p Video Reveal */}
-      <div className="relative w-full h-full flex items-center justify-center">
+      {/* Elegant Centered Video Container */}
+      <div className="relative w-[88vw] max-w-[780px] max-h-[65vh] aspect-video flex items-center justify-center">
         <video
           ref={videoRef}
           src="/Logo_Reveal-2.mp4"
@@ -73,11 +73,11 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
           playsInline
           autoPlay
           preload="auto"
-          className="w-full h-full object-contain md:object-cover select-none pointer-events-none filter contrast-[1.12] brightness-[1.04]"
+          className="w-full h-full object-contain select-none pointer-events-none filter contrast-[1.12] brightness-[1.04]"
         />
 
-        {/* Soft edge feathering so video edges blend seamlessly */}
-        <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_100px_#000000]" />
+        {/* Soft edge feathering so video edges blend seamlessly into background */}
+        <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_60px_#000000]" />
       </div>
 
       {/* Skip button in bottom right */}
