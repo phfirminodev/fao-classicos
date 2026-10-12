@@ -43,10 +43,10 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
 
     video.addEventListener('ended', handleFinish);
 
-    // Fallback timer: 6.2s (the remastered video is 5.8s)
+    // Fallback timer: 5.4s (Logo_Reveal-2 is 5.0s)
     const fallbackTimer = setTimeout(() => {
       handleFinish();
-    }, 6200);
+    }, 5400);
 
     return () => {
       video.removeEventListener('ended', handleFinish);
@@ -64,11 +64,11 @@ export default function VideoIntro({ onComplete }: VideoIntroProps) {
       {/* Ambient background bloom & cinematic vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(161,26,26,0.12)_0%,rgba(0,0,0,0.85)_70%,#000000_100%)] pointer-events-none -z-10" />
 
-      {/* Remastered High-Quality 1080p Video */}
+      {/* High-Quality 1080p Video Reveal */}
       <div className="relative w-full h-full flex items-center justify-center">
         <video
           ref={videoRef}
-          src="/intro-remastered.mp4"
+          src="/Logo_Reveal-2.mp4"
           muted
           playsInline
           autoPlay
